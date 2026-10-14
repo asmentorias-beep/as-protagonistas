@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<title>As Protagonistas | Mentes que Lideram — Inscrição</title>
+<style>
+:root{--navy:#372B20;--gold:#DB734D;--bg:#FFF1DD;--card:#FFF8EE;--ink:#372B20;--soft:#7A6A5A;--line:#E3CDB0;--onnavy:#FFF1DD;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A2018;--card:#372B20;--ink:#FFF1DD;--soft:#CDB9A3;--line:#5A4733;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2A2018;--card:#372B20;--ink:#FFF1DD;--soft:#CDB9A3;--line:#5A4733;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Work Sans","Helvetica Neue",Arial,sans-serif}
+.hl{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:400}
+.hero{background:var(--navy);color:var(--onnavy);text-align:center;padding:56px 22px 64px;position:relative}
+.hero:before{content:"";position:absolute;inset:14px;border:1.5px solid var(--gold);pointer-events:none}
+.brand{color:var(--gold);letter-spacing:.2em;font-size:13px;font-weight:600}
+.hero h1{font-size:clamp(38px,9vw,64px);line-height:1.05;color:var(--onnavy);margin:26px 0 6px;letter-spacing:.02em}
+.hero .pod{font-style:italic;color:var(--gold);font-family:"Playfair Display",Georgia,serif;font-size:20px}
+.hero h2{color:var(--gold);font-size:clamp(24px,5vw,32px);margin:28px 0 12px}
+.hero p{max-width:560px;margin:0 auto 10px;color:var(--onnavy)}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--gold);color:var(--navy);font:600 16px "Work Sans",Arial,sans-serif;padding:14px 30px;text-decoration:none;letter-spacing:.03em}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--gold)}
+.sec{padding:44px 0 8px}
+.sec h2{font-size:26px;color:var(--navy);margin:0 0 6px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sec h2,:root:not([data-theme="light"]) .step h3{color:var(--gold)}}
+:root[data-theme="dark"] .sec h2,:root[data-theme="dark"] .step h3{color:var(--gold)}
+.sec h2:after,.step h3:after{content:"";display:block;width:56px;height:2px;background:var(--gold);margin-top:8px}
+.list{list-style:none;padding:0;margin:18px 0}
+.list li{padding:8px 0 8px 26px;position:relative}
+.list li:before{content:"";position:absolute;left:4px;top:17px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.invest{background:var(--navy);color:var(--onnavy);text-align:center;padding:28px 20px;outline:1.2px solid var(--gold);outline-offset:-8px;margin:26px 0}
+.invest small{color:var(--gold);letter-spacing:.18em;font-weight:600}
+.invest .v{font:700 clamp(38px,10vw,52px) "Work Sans",Arial,sans-serif;color:var(--onnavy);margin:4px 0}
+.invest p{margin:0;font-size:14px}
+.cmp{width:100%;border-collapse:collapse;margin:16px 0 0;font-size:15px}.cmp td{padding:11px 4px;border-bottom:1px solid var(--line);vertical-align:top}.cmp td:last-child{text-align:right;white-space:nowrap;font-weight:600;padding-left:14px}.cmp .tot td{font-weight:700;border-bottom:0;padding-top:16px}.cmp .strike{text-decoration:line-through;color:var(--soft)}.save{background:rgba(219,115,77,.16);border-left:4px solid var(--gold);padding:12px 14px;margin:14px 0 0}.how{counter-reset:s;list-style:none;padding:0}
+.how li{counter-increment:s;padding:6px 0 6px 42px;position:relative}
+.how li:before{content:counter(s);position:absolute;left:0;top:4px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:700;text-align:center;line-height:28px;font-size:14px}
+.note{font-style:italic;color:var(--soft);font-family:"Playfair Display",Georgia,serif;font-size:16px}
+#app{display:none;padding:36px 0 30px}
+.bar{height:5px;background:var(--line);margin-bottom:8px}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .35s}
+.cnt{font-size:13px;color:var(--soft);margin-bottom:18px;letter-spacing:.06em}
+.card{background:var(--card);border:1px solid var(--line);padding:28px 22px;box-shadow:0 6px 24px rgba(55,43,32,.10)}
+.step{display:none}.step.on{display:block;animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.step h3{font-size:24px;color:var(--navy);margin:0 0 20px}
+label{display:block;font-weight:700;font-size:13px;color:var(--navy);margin:16px 0 5px;letter-spacing:.02em}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) label{color:var(--gold)}}
+:root[data-theme="dark"] label{color:var(--gold)}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:16px "Work Sans",Arial,sans-serif;padding:11px 12px;border:1px solid var(--line);border-bottom:2px solid var(--gold);background:var(--bg);color:var(--ink);border-radius:0}
+textarea{min-height:110px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media(max-width:560px){.g2{grid-template-columns:1fr}}
+.opts{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.opt{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:9px 14px;cursor:pointer;font-weight:400;font-size:15px;margin:0;color:var(--ink)}
+.opt input{accent-color:var(--gold);width:18px;height:18px}
+.opt:has(input:checked){border-color:var(--gold);background:rgba(219,115,77,.16)}
+.chk{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:15px;color:var(--ink);margin:14px 0}
+.chk input{margin-top:4px;width:19px;height:19px;accent-color:var(--gold);flex:none}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;flex-wrap:wrap}
+.err{color:#B3261E;font-size:14px;margin-top:12px;min-height:20px}
+.sum{font:13px/1.5 ui-monospace,Menlo,monospace;min-height:190px}
+.send{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 6px}
+.ok{background:rgba(219,115,77,.18);border-left:4px solid var(--gold);padding:12px 14px;margin-top:16px;font-size:14px;display:none}
+footer{background:var(--navy);color:var(--onnavy);text-align:center;padding:40px 20px;margin-top:40px}
+footer h3{color:var(--gold);margin:0 0 14px;font-size:22px}
+footer a{color:var(--onnavy);text-decoration:none;border-bottom:1px solid var(--gold);margin:0 8px;display:inline-block;padding:4px 0}
+footer .t{font:italic 16px "Playfair Display",Georgia,serif;color:var(--gold);margin-top:22px}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="brand">A|S MENTORIAS</div>
+  <h1>MENTES<br>QUE LIDERAM</h1>
+  <div class="pod">podcast</div>
+  <h2 class="hl">As Protagonistas</h2>
+  <p>Um convite para ocupar uma das cadeiras da primeira temporada: uma experiência completa de posicionamento, networking e geração de conteúdo para as suas redes.</p>
+  <p style="margin-top:26px"><a class="btn" href="#inscricao" id="go">QUERO ME INSCREVER</a></p>
+</header>
+
+<main class="wrap">
+  <section class="sec">
+    <h2>O que você leva para casa</h2>
+    <ul class="list">
+      <li>Gravação do seu episódio em <b>áudio e vídeo</b></li>
+      <li><b>Fotos e vídeos do episódio</b>, para usar no seu perfil e nas suas redes</li>
+      
+      <li>Um exemplar do livro <b>“Uma Legião de Líderes”</b>, de coautoria da anfitriã</li>
+      <li><b>Coffee break</b> completo durante a recepção</li>
+    </ul>
+    <h2 style="margin-top:38px">Quanto custaria separado</h2>
+    <table class="cmp">
+      <tr><td>Gravação do episódio em áudio e vídeo</td><td>R$ 250,00</td></tr>
+      <tr><td>Fotos e vídeos do episódio para as suas redes</td><td>R$ 300,00</td></tr>
+      <tr><td>Livro “Uma Legião de Líderes”</td><td>R$ 60,00</td></tr>
+      <tr><td>Coffee break completo</td><td>R$ 40,00</td></tr>
+      <tr><td>Networking e posicionamento com outras empreendedoras</td><td>Inestimável</td></tr>
+      <tr class="tot"><td>Total, se contratado separadamente</td><td class="strike">R$ 650,00</td></tr>
+    </table>
+    <p class="note">Valores de referência aproximados de mercado, apenas para comparação.</p>
+    <p class="save">Você investe <b>R$ 109,99</b> e leva cerca de <b>R$ 650,00</b> em valor: uma economia de mais de <b>R$ 540,00</b>.</p>
+    <div class="invest"><small>SEU INVESTIMENTO</small><div class="v">R$ 109,99</div><p>Taxa colaborativa única, que cobre a produção, as fotos e os vídeos do episódio, o livro e o coffee break.</p></div>
+  </section>
+
+  <section class="sec">
+    <h2>Como funciona a seleção</h2>
+    <ol class="how">
+      <li>Você preenche a inscrição abaixo, uma etapa de cada vez.</li>
+      <li>Eu analiso as inscrições e seleciono as participantes da temporada.</li>
+      <li>As selecionadas recebem a confirmação, a data da gravação e os dados para o pagamento.</li>
+      <li>A vaga é garantida após a confirmação do pagamento.</li>
+    </ol>
+    <p class="note">O envio da inscrição não garante a vaga: as vagas são limitadas e passam por seleção. Nenhum pagamento é solicitado antes da confirmação.</p>
+  </section>
+
+  <section id="inscricao"><div id="app">
+    <div class="bar"><i id="bar"></i></div>
+    <div class="cnt" id="cnt"></div>
+    <div class="card">
+
+      <div class="step">
+        <h3>Seus dados</h3>
+        <label for="nome">Nome completo *</label><input type="text" id="nome" required autocomplete="name">
+        <div class="g2">
+          <div><label for="whats">WhatsApp (com DDD) *</label><input type="tel" id="whats" required autocomplete="tel"></div>
+          <div><label for="email">E-mail *</label><input type="email" id="email" required autocomplete="email"></div>
+          <div><label for="cidade">Cidade / Estado *</label><input type="text" id="cidade" required></div>
+          <div><label for="insta">Instagram</label><input type="text" id="insta" placeholder="@seuperfil"></div>
+        </div>
+      </div>
+
+      <div class="step">
+        <h3>Seu negócio</h3>
+        <label for="empresa">Nome da empresa / marca *</label><input type="text" id="empresa" required>
+        <div class="g2">
+          <div><label for="segmento">Segmento de atuação *</label><input type="text" id="segmento" required></div>
+          <div><label for="cargo">Seu cargo / função</label><input type="text" id="cargo"></div>
+          <div><label for="tempo">Tempo de atuação</label><input type="text" id="tempo"></div>
+          <div><label for="site">Site ou outra rede social</label><input type="text" id="site"></div>
+        </div>
+        <label for="equipe">Quantas pessoas trabalham com você? (opcional)</label><input type="text" id="equipe" style="max-width:240px">
+      </div>
+
+      <div class="step">
+        <h3>Sua história</h3>
+        <label for="trajetoria">Conte, em poucas linhas, a sua trajetória e o que você construiu *</label><textarea id="trajetoria" required></textarea>
+        <label for="desafio">Qual é hoje o seu maior desafio de comunicação ou posicionamento? *</label><textarea id="desafio" required></textarea>
+        <label for="mensagem">Que mensagem você gostaria de levar às ouvintes do podcast?</label><textarea id="mensagem"></textarea>
+        <label for="motivo">Por que você quer ser uma das Protagonistas? *</label><textarea id="motivo" required></textarea>
+      </div>
+
+      <div class="step">
+        <h3>Gravação</h3>
+        <label>Já participou de algum podcast ou entrevista?</label>
+        <div class="opts"><label class="opt"><input type="radio" name="pod" value="Sim"> Sim</label><label class="opt"><input type="radio" name="pod" value="Não"> Não</label></div>
+        <label>Disponibilidade para a gravação (marque quantas quiser)</label>
+        <div class="opts" id="disp">
+          <label class="opt"><input type="checkbox" value="Terça-feira, tarde"> Terça-feira, tarde</label>
+          <label class="opt"><input type="checkbox" value="Sexta-feira, tarde"> Sexta-feira, tarde</label>
+          <label class="opt"><input type="checkbox" value="Sábado, manhã"> Sábado, manhã</label>
+          
+        </div>
+        <label for="origem">Como você conheceu este projeto?</label><input type="text" id="origem">
+      </div>
+
+      <div class="step">
+        <h3>Ciência e envio</h3>
+        <label class="chk"><input type="checkbox" id="t1" required> <span>Estou ciente de que o investimento é de <b>R$ 109,99</b> (taxa colaborativa única), com direito a gravação, fotos e vídeos do episódio, um exemplar do livro “Uma Legião de Líderes” e coffee break.</span></label>
+        <label class="chk"><input type="checkbox" id="t2" required> <span>Entendo que a inscrição não garante a vaga e que o pagamento só será feito após a confirmação da minha seleção.</span></label>
+        <label class="chk"><input type="checkbox" id="t3" required> <span>Autorizo o uso da minha imagem, voz e depoimento no podcast Mentes que Lideram e na divulgação do projeto.</span></label>
+        <label class="chk"><input type="checkbox" id="t4" required> <span>Autorizo o contato por WhatsApp e e-mail para tratar da minha participação.</span></label>
+        <label for="sum" style="margin-top:22px">Resumo da sua inscrição</label>
+        <textarea id="sum" class="sum" readonly></textarea>
+        <div class="send">
+          <a class="btn" id="mail" href="#" target="_blank" rel="noopener">ENVIAR POR E-MAIL</a>
+          <a class="btn ghost" id="wa" href="#" target="_blank" rel="noopener">ENVIAR PELO WHATSAPP</a>
+          <button class="btn ghost" id="copy" type="button">COPIAR RESUMO</button>
+        </div>
+        <div class="ok" id="ok">Ao tocar em enviar, seu aplicativo de e-mail ou o WhatsApp abre com a inscrição pronta: confirme o envio por lá. Se nada abrir, use “Copiar resumo” e mande para <b>asmentorias@gmail.com</b>.</div>
+      </div>
+
+      <div class="err" id="err" role="alert"></div>
+      <div class="nav"><button class="btn ghost" id="prev" type="button">VOLTAR</button><button class="btn" id="next" type="button">CONTINUAR</button></div>
+    </div>
+  </div></section>
+</main>
+
+<footer>
+  <h3>Fale comigo</h3>
+  <a href="https://wa.me/5511965283606" target="_blank" rel="noopener">WhatsApp (11) 96528-3606</a>
+  <a href="https://instagram.com/asmentorias.oficial" target="_blank" rel="noopener">@asmentorias.oficial</a>
+  <a href="mailto:asmentorias@gmail.com">asmentorias@gmail.com</a>
+  <div class="t">Cultivando mentes, lapidando palavras, forjando futuros.</div>
+</footer>
+
+<script>
+(function(){
+  var steps=[].slice.call(document.querySelectorAll('.step')),i=0;
+  var app=document.getElementById('app'),bar=document.getElementById('bar'),cnt=document.getElementById('cnt'),
+      prev=document.getElementById('prev'),next=document.getElementById('next'),err=document.getElementById('err'),
+      sum=document.getElementById('sum'),ok=document.getElementById('ok');
+  var names=['Seus dados','Seu negócio','Sua história','Gravação','Ciência e envio'];
+  var DEST='asmentorias@gmail.com',WA='5511965283606';
+  function v(id){return (document.getElementById(id).value||'').trim()}
+  function show(n){
+    i=n;steps.forEach(function(s,k){s.classList.toggle('on',k===n)});
+    bar.style.width=((n+1)/steps.length*100)+'%';
+    cnt.textContent='ETAPA '+(n+1)+' DE '+steps.length+' · '+names[n].toUpperCase();
+    prev.style.visibility=n===0?'hidden':'visible';
+    next.style.display=n===steps.length-1?'none':'inline-block';
+    err.textContent='';
+    if(n===steps.length-1)build();
+  }
+  function valid(){
+    var f=steps[i].querySelectorAll('[required]');
+    for(var k=0;k<f.length;k++){
+      if(!f[k].checkValidity()){
+        err.textContent=f[k].type==='checkbox'?'Marque esta opção para continuar.':'Preencha este campo corretamente para continuar.';
+        f[k].focus();return false;
+      }
+    }
+    return true;
+  }
+  function build(){
+    var disp=[].slice.call(document.querySelectorAll('#disp input:checked')).map(function(x){return x.value}).join('; ')||'—';
+    var p=document.querySelector('input[name=pod]:checked');
+    var t=[
+      'INSCRIÇÃO — AS PROTAGONISTAS (Mentes que Lideram)','',
+      'Nome: '+v('nome'),'WhatsApp: '+v('whats'),'E-mail: '+v('email'),'Cidade/Estado: '+v('cidade'),'Instagram: '+(v('insta')||'—'),'',
+      'Empresa/marca: '+v('empresa'),'Segmento: '+v('segmento'),'Cargo/função: '+(v('cargo')||'—'),'Tempo de atuação: '+(v('tempo')||'—'),
+      'Site/rede: '+(v('site')||'—'),'Equipe: '+(v('equipe')||'—'),'',
+      'Trajetória: '+v('trajetoria'),'','Maior desafio: '+v('desafio'),'','Mensagem às ouvintes: '+(v('mensagem')||'—'),'','Por que participar: '+v('motivo'),'',
+      'Já participou de podcast/entrevista: '+(p?p.value:'—'),'Disponibilidade: '+disp,'Como conheceu: '+(v('origem')||'—'),'',
+      'Ciente do investimento de R$ 109,99 e de que a vaga depende de seleção: SIM','Autoriza uso de imagem e voz: SIM','Autoriza contato por WhatsApp/e-mail: SIM'
+    ].join('\n');
+    sum.value=t;
+    var subj='Inscrição As Protagonistas — '+v('nome');
+    document.getElementById('mail').href='mailto:'+DEST+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(t);
+    document.getElementById('wa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(t);
+  }
+  next.addEventListener('click',function(){if(valid()){show(i+1);app.scrollIntoView({behavior:'smooth',block:'start'})}});
+  prev.addEventListener('click',function(){show(i-1);app.scrollIntoView({behavior:'smooth',block:'start'})});
+  document.getElementById('go').addEventListener('click',function(e){
+    e.preventDefault();app.style.display='block';show(0);app.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  ['mail','wa'].forEach(function(id){document.getElementById(id).addEventListener('click',function(){ok.style.display='block'})});
+  document.getElementById('copy').addEventListener('click',function(){
+    var b=this;ok.style.display='block';
+    function done(){b.textContent='COPIADO!';setTimeout(function(){b.textContent='COPIAR RESUMO'},2000)}
+    try{navigator.clipboard.writeText(sum.value).then(done,function(){sum.select();document.execCommand('copy');done()})}
+    catch(e){sum.select();try{document.execCommand('copy');done()}catch(x){}}
+  });
+})();
+</script>
+</body>
+</html>
