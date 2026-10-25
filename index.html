@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<title>Mentes que Lideram | Conte a sua história</title>
+<style>
+:root{--bg:#FFF1DD;--bg2:#FFF8EE;--ink:#372B20;--acc:#DB734D;--soft:#7A6A5A;--line:#E3CDB0;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Work Sans",Arial,sans-serif}
+h1,h2,h3{font-weight:700;line-height:1.15;margin:0}
+.it{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:600;color:var(--acc)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--acc);color:var(--ink);font:600 16px "Work Sans",Arial,sans-serif;padding:15px 30px;text-decoration:none;letter-spacing:.02em;border-radius:0}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;border:1.5px solid var(--acc)}
+.hero{padding:34px 0 64px;background:radial-gradient(circle at 88% 12%,rgba(219,115,77,.16),transparent 46%),radial-gradient(circle at 6% 92%,rgba(219,115,77,.10),transparent 42%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:38px;align-items:center}
+@media(max-width:780px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero .lgbox{order:-1}}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--acc);text-transform:uppercase;margin-bottom:16px}
+.hero h1{font-size:clamp(36px,6.4vw,58px)}
+.hero p.lead{font-size:19px;margin:20px 0 28px;color:var(--ink)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:780px){.cta{justify-content:center}}
+.lgbox svg{width:min(76%,300px);height:auto;display:block;margin:0 auto}
+.lgbox{border:1.5px solid var(--acc);outline:1px solid var(--acc);outline-offset:6px;padding:28px 10px;background:rgba(255,248,238,.7);max-width:340px;margin:0 auto}
+section{padding:58px 0}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(26px,4.4vw,36px)}
+h2:after{content:"";display:block;width:56px;height:3px;background:var(--acc);margin:12px 0 0}
+.c h2:after{margin-left:auto;margin-right:auto}
+.c{text-align:center}
+.sub{max-width:640px;margin:14px 0 0;color:var(--soft)}
+.c .sub{margin-left:auto;margin-right:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+@media(max-width:780px){.cards{grid-template-columns:1fr}}
+.card{background:var(--bg2);border:1px solid var(--line);padding:26px 22px;text-align:left}
+section.alt .card{background:var(--bg)}
+.card .n{font:italic 600 34px "Playfair Display",Georgia,serif;color:var(--acc);line-height:1}
+.card h3{font-size:19px;margin:10px 0 8px}
+.card p{margin:0;color:var(--soft);font-size:16px}
+.moments{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:14px}
+.moments li{display:flex;gap:18px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);padding:18px 20px}
+.moments b{display:block;font-size:18px}
+.moments span{color:var(--soft);font-size:16px}
+.moments .n{flex:none;font:italic 600 32px "Playfair Display",Georgia,serif;color:var(--acc);width:34px;line-height:1.1}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;margin-top:28px}
+@media(max-width:780px){.two{grid-template-columns:1fr}}
+.list{list-style:none;padding:0;margin:0}
+.list li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line)}
+.list li:before{content:"";position:absolute;left:3px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--acc)}
+.cmp{width:100%;border-collapse:collapse;font-size:15px}
+.cmp td{padding:10px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp td:last-child{text-align:right;white-space:nowrap;font-weight:600;padding-left:12px}
+.cmp .tot td{font-weight:700;border-bottom:0;padding-top:14px}
+.cmp .st{text-decoration:line-through;color:var(--soft)}
+.invest{background:var(--acc);color:var(--ink);text-align:center;padding:26px 18px;margin-top:18px;outline:1.2px solid var(--ink);outline-offset:-8px}
+.invest small{letter-spacing:.18em;font-weight:600}
+.invest .v{font:700 clamp(38px,9vw,50px) "Work Sans",Arial,sans-serif;margin:2px 0}
+.invest p{margin:0;font-size:14px}
+.save{margin:14px 0 0;font-size:15px;color:var(--soft)}
+.how{counter-reset:s;list-style:none;padding:0;margin:26px 0 0;max-width:640px}
+.how li{counter-increment:s;padding:8px 0 8px 46px;position:relative}
+.how li:before{content:counter(s);position:absolute;left:0;top:7px;width:30px;height:30px;border-radius:50%;background:var(--acc);color:var(--ink);font-weight:700;text-align:center;line-height:30px;font-size:15px}
+.note{font:italic 400 17px/1.6 "Playfair Display",Georgia,serif;color:var(--soft);margin-top:14px}
+.host{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;max-width:720px;margin:0 auto}
+@media(max-width:560px){.host{grid-template-columns:1fr;text-align:center}}
+.host .mk{width:92px;height:92px;border-radius:50%;border:2px solid var(--acc);display:flex;align-items:center;justify-content:center;font:italic 600 34px "Playfair Display",Georgia,serif;color:var(--acc);margin:0 auto}
+#app{display:none}
+.bar{height:5px;background:var(--line);margin:26px 0 8px}
+.bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .35s}
+.cnt{font-size:13px;color:var(--soft);margin-bottom:16px;letter-spacing:.06em}
+.fcard{background:var(--bg2);border:1px solid var(--line);padding:28px 22px;box-shadow:0 6px 24px rgba(55,43,32,.08);text-align:left}
+.step{display:none}.step.on{display:block;animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.step h3{font-size:24px;margin-bottom:6px}
+.step .hint{color:var(--soft);font-size:15px;margin:0 0 6px}
+label{display:block;font-weight:600;font-size:14px;margin:16px 0 5px}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;font:16px "Work Sans",Arial,sans-serif;padding:11px 12px;border:1px solid var(--line);border-bottom:2px solid var(--acc);background:var(--bg);color:var(--ink);border-radius:0}
+textarea{min-height:110px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--acc);outline-offset:1px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media(max-width:560px){.g2{grid-template-columns:1fr}}
+.opts{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.opt{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:9px 14px;cursor:pointer;font-weight:400;font-size:15px;margin:0;background:var(--bg)}
+.opt input{accent-color:var(--acc);width:18px;height:18px}
+.opt:has(input:checked){border-color:var(--acc);background:rgba(219,115,77,.16)}
+.chk{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:15px;margin:14px 0}
+.chk input{margin-top:4px;width:19px;height:19px;accent-color:var(--acc);flex:none}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:26px;flex-wrap:wrap}
+.err{color:#B3261E;font-size:14px;margin-top:12px;min-height:20px}
+.sum{font:13px/1.5 ui-monospace,Menlo,monospace;min-height:180px}
+.send{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 6px}
+.ok{background:rgba(219,115,77,.16);border-left:4px solid var(--acc);padding:12px 14px;margin-top:16px;font-size:14px;display:none}
+footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;background:var(--bg2)}
+footer svg{width:130px;height:auto;display:block;margin:0 auto 14px}
+footer a{color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--acc);margin:0 9px;display:inline-block;padding:3px 0;font-size:15px}
+footer .t{margin-top:20px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Podcast Mentes que Lideram · As Protagonistas</div>
+      <h1>Toda mulher tem uma história <span class="it">que merece ser contada.</span></h1>
+      <p class="lead">Venha ocupar uma cadeira na mesa do <b>Mentes que Lideram</b>: uma conversa sobre a sua trajetória, os seus desafios e as suas conquistas, para inspirar outras mulheres a também ocuparem o seu lugar.</p>
+      <div class="cta"><a class="btn go" href="#inscricao">Quero contar a minha história</a><a class="btn ghost" href="#conversa">Ver como funciona</a></div>
+    </div>
+    <div class="lgbox" id="heroLogo"></div>
+  </div>
+</header>
+
+<section class="c">
+  <div class="wrap">
+    <h2>Por que contar a sua história</h2>
+    <p class="sub">Sua voz tem um poder que você talvez ainda não tenha usado por inteiro.</p>
+    <div class="cards">
+      <div class="card"><div class="n">01</div><h3>Inspire outras mulheres</h3><p>A sua virada de chave pode ser exatamente o que outra mulher precisa ouvir para dar o próximo passo.</p></div>
+      <div class="card"><div class="n">02</div><h3>Posicione a sua marca</h3><p>O seu episódio, as suas fotos e os seus vídeos viram conteúdo de autoridade para o seu perfil e para o seu negócio.</p></div>
+      <div class="card"><div class="n">03</div><h3>Conecte-se com outras líderes</h3><p>Uma experiência de networking com mulheres que também estão construindo, empreendendo e liderando.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="conversa">
+  <div class="wrap">
+    <h2>A nossa conversa</h2>
+    <p class="sub">Você não precisa decorar nada. Eu conduzo, e você só precisa ser você. Vamos percorrer cinco momentos da sua trajetória:</p>
+    <ol class="moments">
+      <li><div class="n">1</div><div><b>A virada de chave</b><span>O momento em que você decidiu sair dos bastidores e assumir o protagonismo.</span></div></li>
+      <li><div class="n">2</div><div><b>O momento de pressão</b><span>Quando a sua voz e a sua presença precisaram ser sustentadas.</span></div></li>
+      <li><div class="n">3</div><div><b>O seu princípio de liderança</b><span>Como você conduz a sua equipe e comunica a sua marca.</span></div></li>
+      <li><div class="n">4</div><div><b>O seu legado</b><span>A lição que você quer deixar para as próximas gerações de mulheres.</span></div></li>
+      <li><div class="n">5</div><div><b>O seu conselho</b><span>O que você diria a uma mulher brilhante que ainda se cala.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O que você leva para casa</h2>
+    <div class="two">
+      <div>
+        <ul class="list">
+          <li>Gravação do seu episódio em <b>áudio e vídeo</b></li>
+          <li><b>Fotos e vídeos do episódio</b>, para usar no seu perfil e nas suas redes</li>
+          <li>Um exemplar do livro <b>“Uma Legião de Líderes”</b>, de coautoria da anfitriã</li>
+          <li><b>Coffee break</b> completo durante a recepção</li>
+        </ul>
+        <div class="invest"><small>SEU INVESTIMENTO</small><div class="v">R$ 109,99</div><p>Taxa colaborativa única, que cobre a produção, as fotos e os vídeos do episódio, o livro e o coffee break.</p></div>
+      </div>
+      <div>
+        <h3 style="font-size:19px;margin-bottom:6px">Quanto custaria separado</h3>
+        <table class="cmp">
+          <tr><td>Gravação do episódio em áudio e vídeo</td><td>R$ 250,00</td></tr>
+          <tr><td>Fotos e vídeos do episódio para as suas redes</td><td>R$ 300,00</td></tr>
+          <tr><td>Livro “Uma Legião de Líderes”</td><td>R$ 60,00</td></tr>
+          <tr><td>Coffee break completo</td><td>R$ 40,00</td></tr>
+          <tr><td>Networking e posicionamento com outras empreendedoras</td><td>Inestimável</td></tr>
+          <tr class="tot"><td>Total, se contratado separadamente</td><td class="st">R$ 650,00</td></tr>
+        </table>
+        <p class="save">Valores de referência aproximados de mercado, apenas para comparação. Você investe <b>R$ 109,99</b> e leva cerca de <b>R$ 650,00</b> em valor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="host">
+      <div class="mk">A|S</div>
+      <div>
+        <h2 style="font-size:26px">Quem conduz a conversa</h2>
+        <p style="margin:16px 0 0">Sou Amanda Schurnovski, mentora de comunicação, liderança e carreira e coautora do livro <b>“Uma Legião de Líderes”</b>. O meu convite é simples: que mais mulheres ocupem o lugar de protagonistas das próprias histórias.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como funciona a seleção</h2>
+    <ol class="how">
+      <li>Você preenche a inscrição abaixo, uma etapa de cada vez.</li>
+      <li>Eu leio cada história com carinho e seleciono as participantes dos próximos episódios.</li>
+      <li>As selecionadas recebem a confirmação, a data da gravação e os dados para o pagamento.</li>
+      <li>A vaga é garantida após a confirmação do pagamento.</li>
+    </ol>
+    <p class="note">As gravações acontecem às terças e sextas à tarde e aos sábados de manhã. As vagas são limitadas e passam por seleção: o envio da inscrição não garante a vaga, e nenhum pagamento é solicitado antes da confirmação.</p>
+    <p style="margin-top:26px"><a class="btn go" href="#inscricao">Quero me inscrever</a></p>
+  </div>
+</section>
+
+<section class="alt" id="inscricao">
+  <div class="wrap" style="max-width:720px">
+    <div id="intro" class="c"><h2>Conte um pouco de você</h2><p class="sub">Leva poucos minutos. Cada resposta me ajuda a conhecer a sua história.</p><p style="margin-top:26px"><button class="btn" id="start" type="button">Começar a minha inscrição</button></p></div>
+    <div id="app">
+      <div class="bar"><i id="bar"></i></div>
+      <div class="cnt" id="cnt"></div>
+      <div class="fcard">
+        <div class="step">
+          <h3>Quem é você</h3><p class="hint">Vamos começar pelo básico.</p>
+          <label for="nome">Nome completo *</label><input type="text" id="nome" required autocomplete="name">
+          <div class="g2">
+            <div><label for="whats">WhatsApp (com DDD) *</label><input type="tel" id="whats" required autocomplete="tel"></div>
+            <div><label for="email">E-mail *</label><input type="email" id="email" required autocomplete="email"></div>
+            <div><label for="cidade">Cidade / Estado *</label><input type="text" id="cidade" required></div>
+            <div><label for="insta">Instagram</label><input type="text" id="insta" placeholder="@seuperfil"></div>
+          </div>
+        </div>
+        <div class="step">
+          <h3>O seu negócio</h3><p class="hint">Conte onde a sua liderança acontece.</p>
+          <label for="empresa">Nome da empresa / marca *</label><input type="text" id="empresa" required>
+          <div class="g2">
+            <div><label for="segmento">Segmento de atuação *</label><input type="text" id="segmento" required></div>
+            <div><label for="cargo">Seu cargo / função</label><input type="text" id="cargo"></div>
+            <div><label for="tempo">Tempo de atuação</label><input type="text" id="tempo"></div>
+            <div><label for="site">Site ou outra rede social</label><input type="text" id="site"></div>
+          </div>
+          <label for="equipe">Quantas pessoas trabalham com você? (opcional)</label><input type="text" id="equipe" style="max-width:240px">
+        </div>
+        <div class="step">
+          <h3>A sua história</h3><p class="hint">Escreva do seu jeito. É a parte que eu mais quero ler.</p>
+          <label for="trajetoria">Conte, em poucas linhas, a sua trajetória e o que você construiu *</label><textarea id="trajetoria" required></textarea>
+          <label for="desafio">Qual é hoje o seu maior desafio de comunicação ou posicionamento? *</label><textarea id="desafio" required></textarea>
+          <label for="mensagem">Que mensagem você gostaria de levar às ouvintes do podcast?</label><textarea id="mensagem"></textarea>
+          <label for="motivo">Por que você quer ser uma das Protagonistas? *</label><textarea id="motivo" required></textarea>
+        </div>
+        <div class="step">
+          <h3>A gravação</h3><p class="hint">Quase lá.</p>
+          <label>Já participou de algum podcast ou entrevista?</label>
+          <div class="opts"><label class="opt"><input type="radio" name="pod" value="Sim"> Sim</label><label class="opt"><input type="radio" name="pod" value="Não"> Não</label></div>
+          <label>Disponibilidade para a gravação (marque quantas quiser)</label>
+          <div class="opts" id="disp">
+            <label class="opt"><input type="checkbox" value="Terça-feira, tarde"> Terça-feira, tarde</label>
+            <label class="opt"><input type="checkbox" value="Sexta-feira, tarde"> Sexta-feira, tarde</label>
+            <label class="opt"><input type="checkbox" value="Sábado, manhã"> Sábado, manhã</label>
+          </div>
+          <label for="origem">Como você conheceu este projeto?</label><input type="text" id="origem">
+        </div>
+        <div class="step">
+          <h3>Confirmação e envio</h3><p class="hint">Leia e marque as opções abaixo.</p>
+          <label class="chk"><input type="checkbox" id="t1" required> <span>Estou ciente de que o investimento é de <b>R$ 109,99</b> (taxa colaborativa única), com direito a gravação, fotos e vídeos do episódio, um exemplar do livro “Uma Legião de Líderes” e coffee break.</span></label>
+          <label class="chk"><input type="checkbox" id="t2" required> <span>Entendo que a inscrição não garante a vaga e que o pagamento só será feito após a confirmação da minha seleção.</span></label>
+          <label class="chk"><input type="checkbox" id="t3" required> <span>Autorizo o uso da minha imagem, voz e depoimento no podcast Mentes que Lideram e na divulgação do projeto.</span></label>
+          <label class="chk"><input type="checkbox" id="t4" required> <span>Autorizo o contato por WhatsApp e e-mail para tratar da minha participação.</span></label>
+          <label for="sum" style="margin-top:20px">Resumo da sua inscrição</label>
+          <textarea id="sum" class="sum" readonly></textarea>
+          <div class="send">
+            <a class="btn" id="mail" href="#" target="_blank" rel="noopener">Enviar por e-mail</a>
+            <a class="btn ghost" id="wa" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+            <button class="btn ghost" id="copy" type="button">Copiar resumo</button>
+          </div>
+          <div class="ok" id="ok">Ao tocar em enviar, seu aplicativo de e-mail ou o WhatsApp abre com a inscrição pronta: confirme o envio por lá. Se nada abrir, use “Copiar resumo” e mande para <b>asmentorias@gmail.com</b>.</div>
+        </div>
+        <div class="err" id="err" role="alert"></div>
+        <div class="nav"><button class="btn ghost" id="prev" type="button">Voltar</button><button class="btn" id="next" type="button">Continuar</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div id="footLogo"></div>
+    <a href="https://wa.me/5511965283606" target="_blank" rel="noopener">WhatsApp (11) 96528-3606</a>
+    <a href="https://instagram.com/asmentorias.oficial" target="_blank" rel="noopener">@asmentorias.oficial</a>
+    <a href="mailto:asmentorias@gmail.com">asmentorias@gmail.com</a>
+    <div class="t it" style="font-size:17px;font-weight:400">Cultivando mentes, lapidando palavras, forjando futuros.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var INK="#372B20",ACC="#DB734D";
+  function sp(cx,cy,r0,r1,a0,dir,t){var d="";for(var i=0;i<=40;i++){var u=i/40,a=a0+dir*u*t*2*Math.PI,r=r0+(r1-r0)*u;d+=(i?"L":"M")+(cx+r*Math.cos(a)).toFixed(2)+" "+(cy+r*Math.sin(a)).toFixed(2)+" "}return d}
+  function logo(id){
+    return '<svg viewBox="-6 0 112 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mentes que Lideram by A|S Mentorias"><defs><clipPath id="cp'+id+'"><rect x="21" y="2" width="18" height="30" rx="9"/></clipPath></defs>'
+    +'<g transform="translate(20 4)" fill="none" stroke="'+INK+'" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="21" y="2" width="18" height="30" rx="9"/>'
+    +'<g clip-path="url(#cp'+id+')" stroke-width="1.1"><path d="M21 9H39M21 14H39M21 19H39M21 24H39"/></g>'
+    +'<path d="M14 27V33a16 16 0 0 0 32 0V27"/><path d="'+sp(9,27,5,1,0,-1,1.5)+'"/><path d="'+sp(51,27,5,1,Math.PI,1,1.5)+'"/>'
+    +'<path d="M30 49V52"/><rect x="26" y="52" width="8" height="14" stroke-width="1.5"/><path d="M28.7 52V66M31.3 52V66" stroke-width="1"/><path d="M20 66H40M23 69.5H37" stroke-width="2"/></g>'
+    +'<g text-anchor="middle" transform="translate(50 4)"><text y="90" font-family="Work Sans,Arial,sans-serif" font-weight="700" font-size="10.5" letter-spacing="2.2" fill="'+INK+'">MENTES QUE</text>'
+    +'<text y="116" font-family="Playfair Display,Georgia,serif" font-style="italic" font-weight="600" font-size="28" fill="'+ACC+'">Lideram</text>'
+    +'<text y="131"><tspan font-family="Playfair Display,Georgia,serif" font-style="italic" font-size="7" fill="'+ACC+'">by </tspan><tspan font-family="Work Sans,Arial,sans-serif" font-weight="600" font-size="5.6" letter-spacing="1.6" fill="'+INK+'">A|S MENTORIAS</tspan></text></g></svg>';
+  }
+  document.getElementById("heroLogo").innerHTML=logo("h");
+  document.getElementById("footLogo").innerHTML=logo("f");
+
+  var steps=[].slice.call(document.querySelectorAll(".step")),i=0;
+  var app=document.getElementById("app"),intro=document.getElementById("intro"),bar=document.getElementById("bar"),cnt=document.getElementById("cnt"),
+      prev=document.getElementById("prev"),next=document.getElementById("next"),err=document.getElementById("err"),sum=document.getElementById("sum"),ok=document.getElementById("ok");
+  var names=["Quem é você","O seu negócio","A sua história","A gravação","Confirmação e envio"];
+  var DEST="asmentorias@gmail.com",WA="5511965283606";
+  function v(id){return (document.getElementById(id).value||"").trim()}
+  function show(n){
+    i=n;steps.forEach(function(s,k){s.classList.toggle("on",k===n)});
+    bar.style.width=((n+1)/steps.length*100)+"%";
+    cnt.textContent="ETAPA "+(n+1)+" DE "+steps.length+" · "+names[n].toUpperCase();
+    prev.style.visibility=n===0?"hidden":"visible";
+    next.style.display=n===steps.length-1?"none":"inline-block";
+    err.textContent="";if(n===steps.length-1)build();
+  }
+  function valid(){
+    var f=steps[i].querySelectorAll("[required]");
+    for(var k=0;k<f.length;k++){if(!f[k].checkValidity()){err.textContent=f[k].type==="checkbox"?"Marque esta opção para continuar.":"Preencha este campo corretamente para continuar.";f[k].focus();return false}}
+    return true;
+  }
+  function build(){
+    var disp=[].slice.call(document.querySelectorAll("#disp input:checked")).map(function(x){return x.value}).join("; ")||"—";
+    var p=document.querySelector("input[name=pod]:checked");
+    var t=["INSCRIÇÃO — MENTES QUE LIDERAM (As Protagonistas)","",
+      "Nome: "+v("nome"),"WhatsApp: "+v("whats"),"E-mail: "+v("email"),"Cidade/Estado: "+v("cidade"),"Instagram: "+(v("insta")||"—"),"",
+      "Empresa/marca: "+v("empresa"),"Segmento: "+v("segmento"),"Cargo/função: "+(v("cargo")||"—"),"Tempo de atuação: "+(v("tempo")||"—"),"Site/rede: "+(v("site")||"—"),"Equipe: "+(v("equipe")||"—"),"",
+      "Trajetória: "+v("trajetoria"),"","Maior desafio: "+v("desafio"),"","Mensagem às ouvintes: "+(v("mensagem")||"—"),"","Por que participar: "+v("motivo"),"",
+      "Já participou de podcast/entrevista: "+(p?p.value:"—"),"Disponibilidade: "+disp,"Como conheceu: "+(v("origem")||"—"),"",
+      "Ciente do investimento de R$ 109,99 e de que a vaga depende de seleção: SIM","Autoriza uso de imagem e voz: SIM","Autoriza contato por WhatsApp/e-mail: SIM"].join("\n");
+    sum.value=t;
+    document.getElementById("mail").href="mailto:"+DEST+"?subject="+encodeURIComponent("Inscrição Mentes que Lideram — "+v("nome"))+"&body="+encodeURIComponent(t);
+    document.getElementById("wa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(t);
+  }
+  function open(){intro.style.display="none";app.style.display="block";show(0);document.getElementById("inscricao").scrollIntoView({behavior:"smooth",block:"start"})}
+  document.getElementById("start").addEventListener("click",open);
+  [].forEach.call(document.querySelectorAll("a.go"),function(a){a.addEventListener("click",function(e){e.preventDefault();open()})});
+  next.addEventListener("click",function(){if(valid()){show(i+1);document.getElementById("inscricao").scrollIntoView({behavior:"smooth",block:"start"})}});
+  prev.addEventListener("click",function(){show(i-1);document.getElementById("inscricao").scrollIntoView({behavior:"smooth",block:"start"})});
+  ["mail","wa"].forEach(function(id){document.getElementById(id).addEventListener("click",function(){ok.style.display="block"})});
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this;ok.style.display="block";
+    function done(){b.textContent="Copiado!";setTimeout(function(){b.textContent="Copiar resumo"},2000)}
+    try{navigator.clipboard.writeText(sum.value).then(done,function(){sum.select();document.execCommand("copy");done()})}catch(e){sum.select();try{document.execCommand("copy");done()}catch(x){}}
+  });
+})();
+</script>
+</body>
+</html>
